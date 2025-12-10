@@ -1,0 +1,190 @@
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING----------
+
+\begin{center}
+    \textbf{\Huge \scshape Luiz Felipe Diniz} \\ \vspace{1pt}
+    \small Campinas, SP - Brazil $|$ \href{mailto:luizd97@gmail.com}{\underline{luizd97@gmail.com}} $|$
+    \href{https://www.linkedin.com/in/levin-diniz}{\underline{linkedin.com/in/levin-diniz}} $|$
+    \href{https://github.com/luizlevindiniz}{\underline{github.com/luizlevindiniz}}
+\end{center}
+
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Virtual State University of São Paulo (UNIVESP)}{São Paulo, Brazil}
+      {Bachelor’s Degree in Computational Engineering}{July 2022 -- Present}
+    \resumeSubheading
+      {State University of Campinas (UNICAMP)}{Campinas, Brazil}
+      {Bachelor’s Degree in Food Engineering}{March 2016 -- June 2021}
+  \resumeSubHeadingListEnd
+
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Codeminer42}{Remote}
+      {Software Developer}{Jan 2025 -- Present}
+      \resumeItemListStart
+        \resumeItem{Developed the frontend checkout flow for a Brazilian ticketing platform using Next.js and TypeScript; the solution was featured in a  \href{https://blog.codeminer42.com/finite-state-machines-and-how-to-build-any-step-by-step-flow-in-react/}{\underline{post}} on the Codeminer42 Blog.}
+        \resumeItem{Delivered a full-stack volunteer management system using Ruby on Rails, enabling a non-profit to coordinate 400+ volunteers and logistical operations across 10 coastal locations in Rio de Janeiro, significantly reducing paperwork and manual processes.}
+        \resumeItem{Optimized loan-related processes for a US-based loan management firm, refining the core logic behind loan payoff calculations.}
+        \resumeItem{Enhanced the UI of internal Codeminer projects using Tailwind CSS and Hotwire.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Encora LLC}{Remote}
+      {Software Developer}{Mar 2024 -- Jan 2025}
+      \resumeItemListStart
+        \resumeItem{Developed frontend features for a major British telecommunications enterprise, leveraging React and TypeScript to build accessible interfaces for high-traffic user portals.}
+        \resumeItem{Contributed to internal engineering initiatives while deepening expertise in technologies like CSS, HTML, and JavaScript.}
+    \resumeItemListEnd
+
+    \resumeSubheading
+      {BTG Pactual Bank}{Hybrid}
+      {Software Developer}{Aug 2023 -- Feb 2024}
+      \resumeItemListStart
+        \resumeItem{Built a dashboard application integrating React, TypeScript, and FastAPI for the derivatives trading team; implemented direct query interfaces via AWS Athena SDK to provide daily asset data.}
+        \resumeItem{Designed and deployed AWS Lambda functions, automating the ingestion and normalization of datasets into internal bank systems.}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+
+%-----------PROJECTS-----------
+\section{Projects}
+    \resumeSubHeadingListStart
+      \resumeProjectHeading
+          {\underline{\href{https://parliapp.vercel.app/landing}{Parli}} $|$ \emph{Next.js, TypeScript, Tailwind CSS, Stripe, Supabase}}{}
+          \resumeItemListStart
+            \resumeItem{Architected a comprehensive SaaS for language tutors using Next.js and Supabase. Integrated Stripe for payment processing and engineered a dashboard for student/class management.}
+          \resumeItemListEnd
+      \resumeProjectHeading
+          {\underline{\href{https://fernandobeloto.com.br}{Fernando Belotto}} $|$ \emph{Next.js, TypeScript, Tailwind CSS}}{}
+          \resumeItemListStart
+            \resumeItem{Delivered a highly performant, SEO-optimized portfolio site for a client.}
+          \resumeItemListEnd
+      \resumeProjectHeading
+          {\underline{\href{https://g3ari.com.br}{G3A}} $|$ \emph{Next.js, Shadcn UI}}{}
+          \resumeItemListStart
+            \resumeItem{Developed a modern corporate interface for a property regularization firm utilizing Shadcn UI components for consistent design systems.}
+          \resumeItemListEnd
+    \resumeSubHeadingListEnd
+
+
+%-----------PROGRAMMING SKILLS-----------
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Languages}{: JavaScript, TypeScript, Python, Ruby, SQL, HTML/CSS} \\
+     \textbf{Frameworks}{: React, Next.js, Ruby on Rails, FastAPI, Tailwind CSS, Hotwire} \\
+     \textbf{Cloud \& Tools}{: AWS (Lambda, Athena), Git, Docker, Supabase, Stripe Integration} \\
+     \textbf{Spoken Languages}{: Portuguese (Native), English (Professional)}
+    }}
+ \end{itemize}
+
+
+%-------------------------------------------
+\end{document}
