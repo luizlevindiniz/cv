@@ -1,0 +1,209 @@
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks, colorlinks=true, urlcolor=resumeblue]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[brazil]{babel}
+\usepackage{tabularx}
+\usepackage{charter}
+\input{glyphtounicode}
+
+%----------COLOR-----------
+\definecolor{resumeblue}{RGB}{26, 54, 93}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\addtolength{\oddsidemargin}{-0.4in}
+\addtolength{\evensidemargin}{-0.4in}
+\addtolength{\textwidth}{0.8in}
+\addtolength{\topmargin}{-.4in}
+\addtolength{\textheight}{0.8in}
+\setlength{\footskip}{14pt}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large\color{resumeblue}
+}{}{0em}{}[\color{resumeblue}\titlerule \vspace{-5pt}]
+
+\pdfgentounicode=1
+
+%-------------------------
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \normalsize\textit{#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+\begin{document}
+
+%----------CABEÇALHO----------
+\begin{center}
+    {\fontsize{26}{28}\selectfont\scshape Luiz Felipe Diniz} \\ \vspace{3pt}
+    \small Campinas, SP - Brasil $|$ \href{mailto:luizd97@gmail.com}{luizd97@gmail.com} $|$
+    \href{https://www.linkedin.com/in/levin-diniz}{linkedin.com/in/levin-diniz} $|$
+    \href{https://github.com/luizlevindiniz}{github.com/luizlevindiniz}
+\end{center}
+
+%-----------PERFIL-----------
+\section{Perfil}
+\small{
+Engenheiro de Software Full-stack com mais de 3 anos de experiência construindo SaaS e plataformas internas usando Ruby on Rails, React, Next.js e TypeScript. Já trabalhei em projetos de consultoria para clientes no Brasil, nos EUA e no Reino Unido, e tenho facilidade tanto para desenvolvimento de produtos quanto para automação de processos.
+}
+
+%-----------EXPERIÊNCIA-----------
+\section{Experiência}
+\resumeSubHeadingListStart
+
+\resumeSubheading
+  {Codeminer42 (Consultoria)}{Remoto}
+  {Engenheiro de Software Full-stack}{Jan 2025 -- Presente}
+
+\resumeSubSubheading
+  {Cliente: GLS.AI (EUA)}{}
+
+\resumeItemListStart
+  \resumeItem{Criei um pipeline assíncrono de ingestão de documentos com Active Storage, AWS S3 e Temporal, capaz de processar mais de 100 documentos por dia em background, eliminando um fluxo antes feito manualmente.}
+  \resumeItem{Desenhei um sistema de notificações que suporta múltiplos e-mails e endereços por usuário, tornando as notificações mais confiáveis e reduzindo a chance de mensagens perdidas.}
+  \resumeItem{Construí um painel para gestão de execuções hipotecárias com Ruby on Rails e Hotwire, facilitando o acompanhamento de fluxos de empréstimos com garantia imobiliária.}
+\resumeItemListEnd
+
+\resumeSubSubheading
+  {Cliente: Praia Para Todos}{}
+
+\resumeItemListStart
+  \resumeItem{Automatizei fluxos operacionais que antes eram feitos no papel usando Ruby on Rails e Active Admin, economizando dezenas de horas de trabalho manual por semana.}
+  \resumeItem{Integrei um sistema de assinatura eletrônica via webhooks, automatizando a aprovação de documentos e eliminando etapas manuais que travavam o processo.}
+  \resumeItem{Criei formulários interativos e interfaces mais dinâmicas com Hotwire (Turbo e Stimulus), melhorando bastante a experiência dos usuários na plataforma.}
+\resumeItemListEnd
+
+\resumeSubSubheading
+  {Cliente: Diversos Ingressos}{}
+
+\resumeItemListStart
+  \resumeItem{Arquitetei uma máquina de estados para o fluxo de checkout com Next.js e TypeScript, tornando o processo de compra de ingressos mais consistente e a reserva de assentos mais confiável.}
+  \resumeItem{Melhorei a performance e o SEO da aplicação usando geração estática (SSG) e renderização no servidor (SSR), reduzindo o tempo de carregamento e melhorando a indexação nos buscadores.}
+  \resumeItem{Conectei o frontend às APIs do backend para manter a disponibilidade de ingressos e o estado da sessão de compra sempre sincronizados em tempo real.}
+\resumeItemListEnd
+
+\resumeSubheading
+  {Encora (Consultoria)}{Remoto}
+  {Estagiário de Engenharia de Software}{Abr 2024 -- Jan 2025}
+
+\resumeSubSubheading
+  {Cliente: BT Group (Reino Unido)}{}
+
+\resumeItemListStart
+  \resumeItem{Refatorei e mantive aplicações web em produção com React, TypeScript e Styled-Components para uma plataforma de telecomunicações de grande escala, melhorando a manutenibilidade e a experiência do usuário.}
+  \resumeItem{Desenvolvi ferramentas de comunicação desktop multiplataforma com Electron para dar suporte a rotinas internas da empresa.}
+  \resumeItem{Escrevi testes unitários e de integração com Jest e React Testing Library, levando a cobertura de testes a 90\%.}
+\resumeItemListEnd
+
+\resumeSubheading
+  {BTG Pactual}{Híbrido}
+  {Estagiário de Automação}{Set 2023 -- Fev 2024}
+
+\resumeItemListStart
+  \resumeItem{Criei ferramentas internas com React e FastAPI para analistas de renda variável consultarem e analisarem dados financeiros, apoiando diretamente as operações da mesa de negociação em produção.}
+  \resumeItem{Integrei o AWS Athena para consultar e visualizar grandes volumes de dados financeiros, agilizando o acesso às informações diárias de ativos.}
+  \resumeItem{Automatizei processos internos do banco com AWS Lambda, jobs agendados e pipelines serverless de ingestão de dados.}
+\resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+%-----------HABILIDADES-----------
+\section{Habilidades}
+\begin{itemize}[leftmargin=0.15in, label={}]
+\small{\item{
+\textbf{Linguagens}{: TypeScript, Ruby, Python} \\
+\textbf{Frontend}{: React, Next.js, Hotwire, Tailwind CSS} \\
+\textbf{Backend}{: Ruby on Rails, Node.js, FastAPI} \\
+\textbf{Testes}{: Jest, React Testing Library} \\
+\textbf{Bancos de Dados}{: PostgreSQL, Supabase} \\
+\textbf{Cloud \& DevOps}{: AWS (S3, Lambda, Athena), Docker, GitHub Actions, Temporal} \\
+\textbf{Idiomas}{: Português (Nativo), Inglês (Profissional), Espanhol (Conversacional)}
+}}
+\end{itemize}
+
+%-----------PROJETOS-----------
+\section{Projetos}
+\resumeSubHeadingListStart
+
+\resumeProjectHeading
+{\href{https://parliapp.vercel.app/landing}{Parli} $|$ \emph{Next.js, TypeScript, Supabase, Stripe}}{}
+\resumeItemListStart
+\resumeItem{Lancei uma plataforma SaaS multi-tenant para professores de idiomas.}
+\resumeItem{Implementei autenticação, cobrança por assinatura, gestão de alunos e agendamento de aulas.}
+\resumeItemListEnd
+
+\resumeProjectHeading
+{\href{https://g3ari.com.br}{G3A} $|$ \emph{Next.js, TypeScript, shadcn/ui}}{}
+\resumeItemListStart
+\resumeItem{Desenvolvi um site corporativo moderno para uma empresa de regularização imobiliária.}
+\resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+%-----------FORMAÇÃO-----------
+\section{Formação}
+\resumeSubHeadingListStart
+
+\resumeSubheading
+  {Universidade Virtual do Estado de São Paulo (UNIVESP)}{São Paulo, Brasil}
+  {Bacharelado em Engenharia de Computação}{}
+
+\vspace{4pt}
+\resumeSubheading
+  {Universidade Estadual de Campinas (UNICAMP)}{Campinas, Brasil}
+  {Bacharelado em Engenharia de Alimentos}{}
+
+\resumeSubHeadingListEnd
+
+%-------------------------------------------
+\end{document}

@@ -1,0 +1,217 @@
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks, colorlinks=true, urlcolor=resumeblue]{hyperref} % CHANGED: colored links, no underline
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{charter} % CHANGED: classic serif, more refined than Computer Modern
+\input{glyphtounicode}
+
+%----------COLOR-----------
+\definecolor{resumeblue}{RGB}{26, 54, 93} % ADDED: dark navy accent color
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins — CHANGED: slightly less aggressive than before
+\addtolength{\oddsidemargin}{-0.4in}
+\addtolength{\evensidemargin}{-0.4in}
+\addtolength{\textwidth}{0.8in}
+\addtolength{\topmargin}{-.4in}
+\addtolength{\textheight}{0.8in}
+\setlength{\footskip}{14pt} % CHANGED: 12pt -> 14pt to avoid underfull vbox warning
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting — CHANGED: added navy color to section title and rule
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large\color{resumeblue}
+}{}{0em}{}[\color{resumeblue}\titlerule \vspace{-5pt}]
+
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+% CHANGED: client name is now bold instead of italic small — more visual weight
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \normalsize\textit{#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+%----------HEADING----------
+% CHANGED: custom font size for name, slightly less overwhelming than \Huge \scshape combo
+\begin{center}
+    {\fontsize{26}{28}\selectfont\scshape Luiz Felipe Diniz} \\ \vspace{3pt}
+    \small Campinas, SP - Brazil $|$ \href{mailto:luizd97@gmail.com}{luizd97@gmail.com} $|$
+    \href{https://www.linkedin.com/in/levin-diniz}{linkedin.com/in/levin-diniz} $|$
+    \href{https://github.com/luizlevindiniz}{github.com/luizlevindiniz}
+\end{center}
+
+
+%-----------SUMMARY-----------
+\section{Profile}
+\small{
+Full-stack Software Engineer with 3+ years building SaaS products and internal platforms using Ruby on Rails, React, Next.js, and TypeScript. Proven track record of delivering solutions for Brazilian and international clients through consulting engagements, with a strong background in product development and automation.
+}
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+\resumeSubHeadingListStart
+
+\resumeSubheading
+  {Codeminer42 (Consulting)}{Remote}
+  {Full-stack Software Engineer}{Jan 2025 -- Present}
+
+\resumeSubSubheading
+  {Client: GLS.AI (US)}{}
+
+\resumeItemListStart
+  \resumeItem{Built an asynchronous document ingestion system using Active Storage, AWS S3, and Temporal to orchestrate batch uploads and background processing of 100+ documents/day, replacing manual handling workflows.}
+  \resumeItem{Designed a multi-contact notification system supporting multiple emails and addresses per user, improving reliability and reducing the risk of missed system notifications.}
+  \resumeItem{Created a foreclosure management dashboard using Ruby on Rails and Hotwire to support real estate-backed loan workflow tracking and operational monitoring.}
+\resumeItemListEnd
+
+\resumeSubSubheading
+  {Client: Praia Para Todos}{}
+
+\resumeItemListStart
+  \resumeItem{Automated core operational workflows using Ruby on Rails and Active Admin, digitizing paper-based processes and saving dozens of hours of manual work per week.}
+  \resumeItem{Integrated a third-party electronic signature system via webhooks to automate document approval pipelines and eliminate manual processing steps, reducing approval friction.}
+  \resumeItem{Developed interactive forms and dynamic user interfaces using Hotwire (Turbo and Stimulus), improving the user experience across the platform.}
+\resumeItemListEnd
+
+\resumeSubSubheading
+  {Client: Diversos Ingressos}{}
+
+\resumeItemListStart
+  \resumeItem{Architected a checkout state machine using Next.js and TypeScript to manage ticket purchasing flows, enhancing session consistency and seat reservation reliability.}
+  \resumeItem{Improved application performance and SEO with hybrid Static Site Generation (SSG) and Server-Side Rendering (SSR), reducing page load latency and improving search engine discoverability.}
+  \resumeItem{Integrated frontend applications with backend APIs to ensure real-time synchronization of purchasing sessions and ticket availability.}
+\resumeItemListEnd
+
+\resumeSubheading
+  {Encora (Consulting)}{Remote}
+  {Software Engineer Intern}{Apr 2024 -- Jan 2025}
+
+\resumeSubSubheading
+  {Client: BT Group (UK)}{}
+
+\resumeItemListStart
+  \resumeItem{Refactored and maintained production-grade web applications using React, TypeScript, and Styled-Components for large-scale telecommunications platforms, improving maintainability and UI consistency.}
+  \resumeItem{Developed cross-platform desktop communication tools using Electron to support internal enterprise routines.}
+  \resumeItem{Improved code reliability by implementing unit and integration test suites with Jest and React Testing Library, raising coverage to 90\%.}
+\resumeItemListEnd
+
+\resumeSubheading
+  {BTG Pactual}{Hybrid}
+  {Automation Intern}{Sep 2023 -- Feb 2024}
+
+\resumeItemListStart
+  \resumeItem{Built internal tools using React and FastAPI for equity analysts to access and analyze financial data, directly supporting trading desk operations in a production environment.}
+  \resumeItem{Integrated AWS Athena to query and visualize large financial datasets, enabling faster access to daily asset information.}
+  \resumeItem{Automated internal banking processes through AWS Lambda functions, scheduled jobs, and serverless data ingestion pipelines.}
+\resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+%-----------PROGRAMMING SKILLS-----------
+\section{Skills}
+\begin{itemize}[leftmargin=0.15in, label={}]
+\small{\item{
+\textbf{Languages}{: TypeScript, Ruby, Python} \\
+\textbf{Frontend}{: React, Next.js, Hotwire, Tailwind CSS} \\
+\textbf{Backend}{: Ruby on Rails, Node.js, FastAPI} \\
+\textbf{Testing}{: Jest, React Testing Library} \\
+\textbf{Databases}{: PostgreSQL, Supabase} \\
+\textbf{Cloud \& DevOps}{: AWS (S3, Lambda, Athena), Docker, GitHub Actions, Temporal} \\
+\textbf{Spoken Languages}{: Portuguese (Native), English (Professional), Spanish (Conversational)}
+}}
+\end{itemize}
+
+%-----------PROJECTS-----------
+\section{Projects}
+\resumeSubHeadingListStart
+
+\resumeProjectHeading
+{\href{https://parliapp.vercel.app/landing}{Parli} $|$ \emph{Next.js, TypeScript, Supabase, Stripe}}{}
+\resumeItemListStart
+\resumeItem{Released a multi-tenant SaaS platform for language tutors.}
+\resumeItem{Implemented authentication, subscription billing, student management, and class scheduling features.}
+\resumeItemListEnd
+
+\resumeProjectHeading
+{\href{https://g3ari.com.br}{G3A} $|$ \emph{Next.js, TypeScript, shadcn/ui}}{}
+\resumeItemListStart
+\resumeItem{Delivered a modern corporate website for a property regularization firm.}
+\resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+%-----------EDUCATION-----------
+\section{Education}
+\resumeSubHeadingListStart
+
+\resumeSubheading
+  {Virtual State University of São Paulo (UNIVESP)}{São Paulo, Brazil}
+  {B.Sc. in Computer Engineering}{}
+
+\vspace{4pt}
+\resumeSubheading
+  {State University of Campinas (UNICAMP)}{Campinas, Brazil}
+  {B.Sc. in Food Engineering}{}
+
+\resumeSubHeadingListEnd
+
+%-------------------------------------------
+\end{document}
